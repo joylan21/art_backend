@@ -1,0 +1,4 @@
+pillow
+drf-yasg
+djangorestframework
+django-filter
