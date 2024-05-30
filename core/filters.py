@@ -4,10 +4,12 @@ from .models import Art
 class ArtsFilter(filters.FilterSet):
     category = filters.CharFilter(field_name='category__name', lookup_expr='icontains')
     title = filters.CharFilter(field_name='title', lookup_expr='icontains')
+    author_id = filters.NumberFilter(field_name='author__id', lookup_expr='iexact')
 
     class Meta:
         model = Art
         fields = (
             'category',
-            'title'
+            'title',
+            'author'
             )
