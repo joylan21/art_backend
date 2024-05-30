@@ -24,6 +24,7 @@ class Category(TimestampedModel):
 class Art(TimestampedModel):
     author = models.ForeignKey(Author, on_delete=models.RESTRICT)
     title = models.CharField(max_length=500)
+    artId = models.CharField(max_length=500)
     image = models.ImageField(upload_to='art_photos')
     address = models.TextField()
     category = models.ForeignKey(Category, on_delete=models.RESTRICT)
