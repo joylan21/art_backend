@@ -24,7 +24,7 @@ class ArtViewSet(viewsets.ModelViewSet):
     filterset_class = ArtsFilter
     filter_backends = [DjangoFilterBackend, filters.SearchFilter]
     search_fields = ['title', 'address', 'category']
-    pagination_class = StandardResultsSetPagination
+    # pagination_class = StandardResultsSetPagination
     http_method_names = ['get']
 
 
