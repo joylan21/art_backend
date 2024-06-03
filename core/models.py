@@ -30,6 +30,8 @@ class Art(TimestampedModel):
     category = models.ForeignKey(Category, on_delete=models.RESTRICT)
     measurement = models.CharField(max_length=100)
     price = models.CharField(max_length=100)
+    note = models.CharField(max_length=100, null=True, blank=True)
+    status = models.CharField(max_length=100, null=True, blank=True)
 
     def __str__(self) -> str:
         return self.title
